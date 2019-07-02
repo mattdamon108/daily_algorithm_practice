@@ -3,6 +3,14 @@ function main() {
   console.log(result);
 }
 
+/* Divisors
+ *
+ * 1. Make an empty array with length of integer arg.
+ * 2. Loop of each item kyes of empty array to check if it is divisors or not.
+ * 3. Return array after getting rid of 1 and self, or string `${integer} is prime`
+ *
+ */
+
 function divisors(integer) {
   const emptyArr = Array(integer).fill(0);
   let result = [];
