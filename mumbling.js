@@ -1,6 +1,6 @@
 function main() {
   const sample1 = "accum";
-  const result = mumbling(sample1);
+  const result = mumbling(sample1); // expected : A-Cc-Ccc-Uuuu-Mmmmm
   console.log(result);
 }
 
