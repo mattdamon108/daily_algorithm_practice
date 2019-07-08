@@ -1,8 +1,8 @@
 /* Unique in Order
 
-1. Firstly, I mis-read a problem then I tried to solve this with `Set` to get a unique values in order.
-2. I realized that this is not 100% unique value problem, then I use a iterator to solve it.
-3. Trying to solve it without type-checking regardless of the given arg string or array.
+1. Firstly, I mis-read a problem then I tried to solve this with `Set` to get unique values in order.
+2. I realized that this is not 100% unique value problem, then I use an iterator to solve it.
+3. Trying to solve it without a type-checking regardless of the given arg string or array.
 
 RUN TEST : npm test test/uniqueInOrder.test.js
 */
