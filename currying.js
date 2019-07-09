@@ -1,6 +1,7 @@
 /*
  */
 
+// TODO: check the testing cases
 function add(n) {
   const nums = [];
   const currying = m => {
