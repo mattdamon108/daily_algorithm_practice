@@ -1,18 +1,22 @@
 /* Adding Big Numbers
- */
+1. ~~ bit operator can be used to convert type string to int
+2. true or false can be type coersion to 1 or 0
+3. BEST answer is the BEST
 
-// function add(a, b) {
-//   let abacus = "";
-//   let c = 0;
-//   const arrA = Array.from(a, Number);
-//   const arrB = Array.from(b, Number);
-//   while (arrA.length || arrB.length) {
-//     c += ~~arrA.pop() + ~~arrB.pop();
-//     abacus = (c % 10) + abacus;
-//     c = c > 9;
-//   }
-//   return abacus;
-// }
+<BEST>
+function add(a, b) {
+  let abacus = "";
+  let c = 0;
+  const arrA = Array.from(a, Number);
+  const arrB = Array.from(b, Number);
+  while (arrA.length || arrB.length) {
+    c += ~~arrA.pop() + ~~arrB.pop();
+    abacus = (c % 10) + abacus;
+    c = c > 9;
+  }
+  return abacus;
+}
+ */
 
 function add(a, b) {
   let abacus = [];
