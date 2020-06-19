@@ -1,0 +1,28 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cote.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdamon108/daily_algorithm_practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattdamon108/daily_algorithm_practice/issues"
+  },
+  "homepage": "https://github.com/mattdamon108/daily_algorithm_practice#readme"
+}
