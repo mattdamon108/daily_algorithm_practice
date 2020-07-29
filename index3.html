@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function handleClick(e) {
+    if (e.target.classList.contains("card")) {
+      const cards = document.getElementsByClassName("card");
+      for (let i = 0; i < cards.length; i++) {
+        if (cards[i] !== e.target) {
+          cards[i].innerHTML = "down";
+        } else {
+          cards[i].innerHTML = "up";
+        }
+      }
+    }
+  }
+
+  function setup() {
+    document.addEventListener("click", handleClick);
+  }
+
+  // Example case.
+  document.body.innerHTML = `
+      <table id="card-container">
+        <tbody>
+          <tr>
+            <td class="card">down</td>
+            <td class="card">up</td>
+          </tr>
+          <tr>
+            <td class="card">down</td>
+            <td class="card">down</td>
+          </tr>
+        </tbody>
+      </table>`;
+
+  setup();
+
+  //   document.getElementsByClassName("card")[0].click();
+  console.log(document.body.innerHTML);
+</script>

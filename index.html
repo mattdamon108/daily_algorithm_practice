@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+<script type="text/babel">
+  const CommentList = () => {
+    const [comments, setComments] = React.useState([]);
+    const [comment, setComment] = React.useState("");
+
+    const handleSubmit = (e) => {
+      if (comment) {
+        setComments([...comments, comment]);
+        setComment("");
+      }
+    };
+
+    const handleChange = (e) => {
+      setComment(e.currentTarget.value);
+    };
+
+    return (
+      <div>
+        <form>
+          <input type="text" value={comment} onChange={handleChange} />
+          <input type="button" value="Post" onClick={handleSubmit} />
+        </form>
+        <ul>
+          {comments.map((comment, i) => (
+            <li key={`${i}-${comment}`}>{comment}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  document.body.innerHTML = "<div id='root'> </div>";
+
+  const rootElement = document.getElementById("root");
+  ReactDOM.render(<CommentList />, rootElement);
+
+  var input = document.querySelector("input[type='text']");
+  input.value = "test";
+  input._valueTracker.setValue("");
+  input.dispatchEvent(new Event("change", { bubbles: true }));
+
+  document.querySelector("input[type='button']").click();
+  console.log(document.getElementsByTagName("ul")[0].innerHTML);
+</script>
